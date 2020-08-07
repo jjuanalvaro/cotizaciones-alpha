@@ -3,6 +3,7 @@ import { UserContext } from '../UserContext';
 import { axios } from '../config';
 import { Route, Link } from "react-router-dom";
 import M from 'materialize-css'
+import Clientes from './clientes'
 
 const Dashboard = () => {
 
@@ -41,7 +42,7 @@ const Dashboard = () => {
 							</div>
 						</div>
 					</li>
-					<li><Link to="/" className="waves-effect"><i className='material-icons'>face</i>Mis Clientes</Link></li>
+					<li><Link to="/clientes" className="waves-effect"><i className='material-icons'>face</i>Mis Clientes</Link></li>
 					<li><a href="#!" className="subheader">Configuración</a></li>
 					<li><a href="#!" onClick={_salir} className="waves-effect"><i className="material-icons">exit_to_app</i>Salir</a></li>
 				</ul>
@@ -49,6 +50,7 @@ const Dashboard = () => {
 			</div>
 			<div className="col s12 m8 l9">
 				<Route path="/" exact component={hola} />
+				<Route path="/clientes" exact component={Clientes} />
 			</div>
 		</div>
 	)

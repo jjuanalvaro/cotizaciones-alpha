@@ -6,7 +6,7 @@ import Admin from '../dashboard'
 const Login=props=>{
 
 	const [data,setData] = useState({})
-	const { setUser, user, auth, setAuth }=useContext(UserContext);
+	const { setUser, auth, setAuth }=useContext(UserContext);
 	const [loader, setLoader]=useState(true)
 
 	useEffect(()=>{
@@ -44,7 +44,7 @@ const Login=props=>{
 			</div>
 		)
 
-	return auth?(user.rol==='admin'?<Admin />:<div>No autorizado ip bloqueada!!!</div>):
+	return auth?<Admin />:
 	(
 		<div className="row center">
 			<div className="col s6 m3" style={{width: '300px',height: '100px',padding: '20px',position: 'absolute',top: '30%',left: '50%',margin: '-70px 0 0 -170px'}}>
